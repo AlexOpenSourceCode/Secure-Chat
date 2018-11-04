@@ -1,4 +1,4 @@
-Secure Chat is an encrypted peer to peer chat program that uses PGP and AES encryption to secure communications. Each user generates a PGP public and private key. Your PGP key is then used to generate a new AES key for each chat session when a client connects to your server.
+Secure Chat is an encrypted peer to peer chat program that uses PGP and AES encryption to secure communications. Each user generates a PGP public and private key. Your PGP key is then used to exchange a new AES key for each chat session when a client connects to your server.
 
 Primary code files:
 main.cpp
