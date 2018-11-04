@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{428B9743-07EF-4503-B552-B02EDF57F753}</ProjectGuid>
+    <RootNamespace>RMP</RootNamespace>
+    <ProjectName>RMP</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <NuGetPackageImportStamp>f267d316</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>C:\code\c++\libs\crypto565;C:\code\c++\boost_1_64_0;C:\code\c++\libs\eigen\Eigen\src\Core;$(VC_IncludePath);$(WindowsSDK_IncludePath);C:/code/c++/libs/eigen/Eigen;C:\code\c++\libs\curl\builds\release\include;C:\code\c++\boost_1_64_0\lib64-msvc-12.0</IncludePath>
+    <LibraryPath>C:\code\c++\libs\crypto565;C:\code\c++\boost_1_64_0\libs;$(VC_LibraryPath_x86);$(WindowsSDK_LibraryPath_x86);C:/code/c++/libs/eigen/Eigen/;C:\local\curl\builds\release\lib</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>C:\local\curl\builds\release\include\curl;C:\local\curl\builds\release\include;$(IncludePath)</IncludePath>
+    <LibraryPath>C:\local\curl\builds\release\lib;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level1</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalUsingDirectories>C:\code\c++\libs\eigen;C:\code\c++\libs\eigen\Eigen;C:\code\c++\boost_1_64_0\lib32-msvc-12.0;%(AdditionalUsingDirectories)</AdditionalUsingDirectories>
+      <AdditionalIncludeDirectories>C:\local\curl\builds\release\include;C:\code\c++\boost_1_64_0;C:\code\c++\libs\eigen\Eigen;C:\code\c++\libs\eigen;C:/code/c++/libs/crypto565;C:\code\c++\libs\cryptopp565;C:\code\c++\boost_1_64_0\lib32-msvc-12.0</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <BrowseInformation>true</BrowseInformation>
+      <PreprocessorDefinitions>_MBCS;_DEBUG;_SCL_SECURE_NO_WARNINGS;_CRT_SECURE_NO_WARNINGS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MultiProcessorCompilation>false</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\code\c++\libs\cryptopp565\Win32\Output\Debug;C:\code\c++\libs\cryptopp565\Win32\DLL_Output\Debug;C:\code\c++\boost_1_64_0\boost;C:\code\c++\boost_1_64_0\lib32-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>cryptlib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libcurl.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="ActiveSpell.cpp" />
+    <ClCompile Include="AESObj.cpp" />
+    <ClCompile Include="App.cpp" />
+    <ClCompile Include="base.cpp" />
+    <ClCompile Include="base64.cpp" />
+    <ClCompile Include="Camera.cpp" />
+    <ClCompile Include="Chat.cpp" />
+    <ClCompile Include="gui.cpp" />
+    <ClCompile Include="gui_button.cpp" />
+    <ClCompile Include="gui_input.cpp" />
+    <ClCompile Include="gui_obj.cpp" />
+    <ClCompile Include="gui_text_view.cpp" />
+    <ClCompile Include="html5.cpp" />
+    <ClCompile Include="RSAObj.cpp" />
+    <ClCompile Include="Server.cpp" />
+    <ClCompile Include="Client.cpp" />
+    <ClCompile Include="Enc.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="OBB2D.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="Player.cpp" />
+    <ClCompile Include="shader_loader.cpp" />
+    <ClCompile Include="shader_loader.h" />
+    <ClCompile Include="Spell.cpp" />
+    <ClCompile Include="test.cpp" />
+    <ClCompile Include="V2ctor.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="asd.bash" />
+    <None Include="fragment.glsl" />
+    <None Include="packages.config" />
+    <None Include="shader.glsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ActiveSpell.h" />
+    <ClInclude Include="AESObj.h" />
+    <ClInclude Include="App.h" />
+    <ClInclude Include="base.h" />
+    <ClInclude Include="base64.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="Chat.h" />
+    <ClInclude Include="gui.h" />
+    <ClInclude Include="gui_button.h" />
+    <ClInclude Include="gui_globals.h" />
+    <ClInclude Include="gui_input.h" />
+    <ClInclude Include="gui_obj.h" />
+    <ClInclude Include="gui_text_view.h" />
+    <ClInclude Include="html5.hpp" />
+    <ClInclude Include="RSAObj.h" />
+    <ClInclude Include="Server.h" />
+    <ClInclude Include="Client.h" />
+    <ClInclude Include="OBB2D.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="Player.h" />
+    <ClInclude Include="Spell.h" />
+    <ClInclude Include="V2ctor.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\packages\nupengl.core.redist.0.0.0.1\build\native\nupengl.core.redist.targets" Condition="Exists('..\packages\nupengl.core.redist.0.0.0.1\build\native\nupengl.core.redist.targets')" />
+    <Import Project="..\packages\nupengl.core.0.0.0.1\build\native\nupengl.core.targets" Condition="Exists('..\packages\nupengl.core.0.0.0.1\build\native\nupengl.core.targets')" />
+    <Import Project="..\packages\glm.0.9.7.0\build\native\glm.targets" Condition="Exists('..\packages\glm.0.9.7.0\build\native\glm.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\nupengl.core.redist.0.0.0.1\build\native\nupengl.core.redist.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.redist.0.0.0.1\build\native\nupengl.core.redist.targets'))" />
+    <Error Condition="!Exists('..\packages\nupengl.core.0.0.0.1\build\native\nupengl.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\nupengl.core.0.0.0.1\build\native\nupengl.core.targets'))" />
+    <Error Condition="!Exists('..\packages\glm.0.9.7.0\build\native\glm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\glm.0.9.7.0\build\native\glm.targets'))" />
+  </Target>
+</Project>
